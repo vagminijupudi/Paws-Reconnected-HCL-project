@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Blog</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+    </style>
+
+</head>
+<body class="bg-gray-100">
+    <div class="container mx-auto mt-8 p-4">
+        <h1 class="text-2xl font-semibold mb-4">Pet Blog</h1>
+        <!-- Search input field -->
+        <input type="text" id="searchInput" placeholder="Search by pet name" class="w-full p-2 border rounded mb-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4" id="petList">
+            <!-- Loop through petData and display details -->
+            <% petData.reverse().forEach((pet) => { %>
+                <div class="border p-4 rounded-lg shadow-md">
+                    <h2 class="text-xl font-semibold mb-2"><%= pet.Name %></h2>
+                    <p class="text-gray-500"><%= pet.Type %></p>
+                    <p class="text-<%= pet.Status === 'Lost' ? 'red' : 'green' %>-500 font-semibold">
+                        <%= pet.Status %>
+                    </p>
+                    <p class="mt-2"><%= pet.Description %></p>
+                    <img src="<%= pet.Image %>" alt="<%= pet.Name %>" class="mt-4 rounded-md">
+                </div>
+            <% }); %>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript function to filter pet details by name
+        document.getElementById('searchInput').addEventListener('input', function () {
+            const searchValue = this.value.toLowerCase();
+            const petList = document.getElementById('petList');
+            const petItems = petList.getElementsByClassName('border');
+
+            for (let i = 0; i < petItems.length; i++) {
+                const petName = petItems[i].querySelector('.text-xl').textContent.toLowerCase();
+                if (petName.includes(searchValue)) {
+                    petItems[i].style.display = 'block';
+                } else {
+                    petItems[i].style.display = 'none';
+                }
+            }
+        });
+    </script>
+</body>
+</html>

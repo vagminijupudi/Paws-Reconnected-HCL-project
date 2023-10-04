@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Detail Collection</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background: linear-gradient(90deg, #ce0aff36, #09f1cb);
+        }
+    </style>
+
+</head>
+<body class="bg-gray-100 flex items-center justify-center h-screen">
+    <div class="bg-white max-w-md p-8 rounded-lg shadow-md">
+        <h1 class="text-2xl font-semibold mb-4">Pet Detail Collection</h1>
+        <form action="/submit" method="POST" enctype="multipart/form-data">
+            <div class="mb-4">
+                <label for="name" class="block text-gray-600">Pet Name:</label>
+                <input type="text" id="name" name="name" required class="w-full p-2 border rounded">
+            </div>
+            <div class="mb-4">
+                <label for="type" class="block text-gray-600">Pet Type:</label>
+                <input type="text" id="type" name="type" required class="w-full p-2 border rounded">
+            </div>
+            <div class="mb-4">
+                <label for="description" class="block text-gray-600">Description: ( Age, Gender, Skin color, Breed, Collar, Unique identification, Lost Location )</label>
+                <textarea id="description" name="description" required class="w-full p-2 border rounded"></textarea>
+            </div>
+            <div class="mb-4">
+                <label for="image" class="block text-gray-600">Upload Image ( JPG Format only ):</label>
+                <input type="file" id="image" name="image" accept="image/*" required class="w-full">
+            </div>
+            <div class="mb-4">
+                <label class="block text-gray-600">Status:</label>
+                <input type="radio" id="lost" name="lostOrFound" value="Lost" required>
+                <label for="lost" class="mr-4">Lost</label>
+                <input type="radio" id="found" name="lostOrFound" value="Found" required>
+                <label for="found">Found</label>
+            </div>
+            <button type="submit" class="bg-blue-500 text-white font-semibold py-2 px-4 rounded hover:bg-blue-600 transition duration-300 w-full">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
