@@ -23,3 +23,13 @@ and while running the file for the first time in the visual studio terminal
 
 first type npm i and then node index.js
 
+NOTE: use pet pics folder for uploading the image file in the wesite
+
+OUTPUT:
+![image](https://github.com/vagminijupudi/Paws-Reconnected-HCL-project/assets/109346771/e188223e-f81d-4e48-9d3a-bdb986f68472)
+![image](https://github.com/vagminijupudi/Paws-Reconnected-HCL-project/assets/109346771/a28cad5c-3e0f-4f89-b8a4-e3c0ee6497b8)
+![image](https://github.com/vagminijupudi/Paws-Reconnected-HCL-project/assets/109346771/2e39f954-d731-40e2-9278-bab936fb63d7)
+![image](https://github.com/vagminijupudi/Paws-Reconnected-HCL-project/assets/109346771/3e16d925-f22e-437b-94a5-02763f3918a6)
+
+
+
