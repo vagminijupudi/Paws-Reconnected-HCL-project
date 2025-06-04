@@ -23,7 +23,7 @@ and while running the file for the first time in the visual studio terminal
 
 first type npm i and then node index.js
 
-NOTE: use pet pics folder for uploading the image file in the wesite
+NOTE: use pet pics folder for uploading the image file in the website
 
 OUTPUT:
 ![image](https://github.com/vagminijupudi/Paws-Reconnected-HCL-project/assets/109346771/e188223e-f81d-4e48-9d3a-bdb986f68472)
